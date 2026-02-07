@@ -18,12 +18,15 @@ public class MainCalcu {
             System.out.print("Pick a number: ");
             choice = scan.nextInt();
 
-            if (choice == 4) {
+            if (choice >= 5) {
                 continueCalc = false;
                 System.out.println("\n !! Thank you for using the calculator !!\n");
                 break;
-
             }
+            if (choice < 1 || choice > 4) {
+                System.out.println("Invalid choice. Please try again!\n");
+                continue;
+            }            
 
              System.out.print("Enter your first number: ");
             int num1 = scan.nextInt();
@@ -36,6 +39,11 @@ public class MainCalcu {
             switch (choice) {
                 case 1:
                     result = num1 + num2;
+                    System.out.println("Result: " + result);
+                    break;
+
+                case 2:
+                    result = num1 - num2;
                     System.out.println("Result: " + result);
                     break;
 
