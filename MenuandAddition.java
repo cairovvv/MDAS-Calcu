@@ -14,7 +14,8 @@ public class MainCalcu {
             System.out.println("1. Addition");
             System.out.println("2. Subtraction");
             System.out.println("3. Multiplication");
-            System.out.println("4. Exit");
+            System.out.println("4. Division");
+            System.out.println("5. Exit");
             System.out.print("Pick a number: ");
             choice = scan.nextInt();
 
@@ -28,7 +29,7 @@ public class MainCalcu {
                 continue;
             }            
 
-             System.out.print("Enter your first number: ");
+            System.out.print("Enter your first number: ");
             int num1 = scan.nextInt();
 
             System.out.print("Enter your second number: ");
@@ -41,6 +42,16 @@ public class MainCalcu {
                     result = num1 + num2;
                     System.out.println("Result: " + result);
                     break;
+                
+                case 3:
+                    result = num1 * num2;
+                    System.out.println("Result: " + result);
+                    break;
+                
+                case 4:
+                    result = num1 / num2;
+                    System.out.println("Result: " + result);
+                    break;
 
                 case 2:
                     result = num1 - num2;
@@ -49,5 +60,6 @@ public class MainCalcu {
 
             }
         }
+        scan.close();
     }
 }
